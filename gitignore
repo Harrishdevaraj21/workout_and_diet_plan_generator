@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+.streamlit/
+_model_tmp/
+models_cache/
