@@ -3,6 +3,6 @@ scikit-learn==1.6.1
 numpy==1.26.4
 pandas==2.2.2
 joblib==1.4.2
-sentence-transformers==2.7.0
+sentence-transformers==2.6.0
 plotly==5.22.0
 torch==2.2.2
