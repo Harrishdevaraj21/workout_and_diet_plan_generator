@@ -6,4 +6,6 @@ joblib==1.4.2
 sentence-transformers==2.2.2
 plotly==5.22.0
 torch==2.2.2
-transformers>=4.6.0,<4.58.0
+transformers==4.30.0
+huggingface_hub==0.14.1
+tokenizers==0.13.3
