@@ -66,11 +66,11 @@ class ModelLoader:
     """
 
     MODEL_FILES = {
-        "scaler":               "scaler.pkl",
-        "kmeans":               "kmeans_model.pkl",
-        "calorie_preprocessor": "calorie_preprocessor.pkl",
-        "dtr":                  "dtr_model.pkl",
-        "sentence_transformer": "sentence_transformer_model.pkl",
+        "scaler":               "models/scaler.pkl",
+        "kmeans":               "models/kmeans_model.pkl",
+        "calorie_preprocessor": "models/calorie_preprocessor.pkl",
+        "dtr":                  "models/dtr_model.pkl",
+        "sentence_transformer": "models/sentence_transformer_model.pkl",
     }
 
     STUBS = {
