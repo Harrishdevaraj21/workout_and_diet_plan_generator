@@ -66,11 +66,11 @@ class ModelLoader:
     """
 
     MODEL_FILES = {
-        "scaler":               "models/scaler.pkl",
-        "kmeans":               "models/kmeans_model.pkl",
-        "calorie_preprocessor": "models/calorie_preprocessor.pkl",
-        "dtr":                  "models/dtr_model.pkl",
-        "sentence_transformer": "models/sentence_transformer_model.pkl",
+        "scaler":               "scaler.pkl",
+        "kmeans":               "kmeans_model.pkl",
+        "calorie_preprocessor": "calorie_preprocessor.pkl",
+        "dtr":                  "dtr_model.pkl",
+        "sentence_transformer": "sentence_transformer_model.pkl",
     }
 
     STUBS = {
@@ -111,18 +111,31 @@ class ModelLoader:
 
     # ── Public API ────────────────────────────────────────────────────────────
 
+    # Exact column names the scaler/kmeans were trained on
+    SCALER_COLUMNS = [
+        "age",
+        "bmi",
+        "activity_level_active",
+        "activity_level_light",
+        "activity_level_moderate",
+        "activity_level_sedentary",
+        "activity_level_very active",
+    ]
+
     def scale(self, features: np.ndarray) -> np.ndarray:
-        """Scale features with scaler.pkl."""
-        return self._models["scaler"].transform(features)
+        """Scale features — pass a named DataFrame to match training schema."""
+        df = pd.DataFrame(features, columns=self.SCALER_COLUMNS)
+        return self._models["scaler"].transform(df)
 
     def predict_cluster(self, scaled_features: np.ndarray) -> int:
         """Predict KMeans fitness cluster."""
-        return int(self._models["kmeans"].predict(scaled_features)[0])
+        df = pd.DataFrame(scaled_features, columns=self.SCALER_COLUMNS)
+        return int(self._models["kmeans"].predict(df)[0])
 
     def preprocess_calories(self, feature_dict: dict) -> np.ndarray:
         """
-        Convert feature dict → DataFrame → preprocessor → array.
-        Handles both sklearn ColumnTransformer/Pipeline and raw arrays.
+        Convert feature dict → named DataFrame → preprocessor → array.
+        The preprocessor (ColumnTransformer/Pipeline) handles encoding internally.
         """
         df = pd.DataFrame([feature_dict])
         prep = self._models["calorie_preprocessor"]
