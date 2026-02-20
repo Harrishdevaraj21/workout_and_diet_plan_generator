@@ -70,7 +70,7 @@ class ModelLoader:
         "kmeans":               "models/kmeans_model.pkl",
         "calorie_preprocessor": "models/calorie_preprocessor.pkl",
         "dtr":                  "models/dtr_model.pkl",
-        "sentence_transformer": "models/sentence_transformer_model.pkl",
+        "sentence_transformer": "https://drive.google.com/file/d/1dDtVyHzG-yJ-Xt_txcmwNeJ08aR8QDNu/view?usp=sharing",
     }
 
     STUBS = {
