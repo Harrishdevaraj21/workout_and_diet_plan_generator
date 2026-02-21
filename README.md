@@ -1,9 +1,37 @@
-# ⚡ AI Fitness Planner — Personalized Workout & Diet Planner
+# 🏋️‍♂️ AI-Powered Personalized Workout & Diet Plan Generator
 
-A production-ready Streamlit application that integrates five ML models to generate
-hyper-personalized weekly workout and diet plans.
+An intelligent, AI-driven web application that generates **personalized
+workout and diet plans** based on user-specific health metrics, fitness
+goals, cultural food habits, budget constraints, and available
+equipment.
 
----
+Built using **Machine Learning + Streamlit**, this system combines
+clustering, regression modeling, and NLP-based personalization to
+deliver customized fitness guidance.
+
+------------------------------------------------------------------------
+
+## 🚀 Live Demo
+
+🔗 Streamlit App:\
+https://workout-and-diet-plan-generator.streamlit.app/
+
+------------------------------------------------------------------------
+
+## 🎯 Project Objective
+
+Most fitness applications provide generic plans that do not adapt to:
+
+-   Individual health parameters\
+-   Cultural dietary preferences\
+-   Budget constraints\
+-   Available workout equipment\
+-   Fitness level
+
+This project solves that problem by using **machine learning models** to
+generate tailored plans for each user.
+
+------------------------------------------------------------------------
 
 ## 📁 Project Structure
 
@@ -139,3 +167,41 @@ model.encode(["free text string"])  # returns (1, embedding_dim) array
 ---
 
 *Built with Streamlit · scikit-learn · Plotly · Sentence Transformers*
+
+
+## 💡 Key Features
+
+✔ Personalized workout plans\
+✔ Budget-aware diet plans\
+✔ Cultural dietary adaptability\
+✔ Equipment-based workout filtering\
+✔ Machine learning-driven calorie estimation\
+✔ NLP-based personalization\
+✔ Interactive dashboard
+
+------------------------------------------------------------------------
+
+## 📈 Future Enhancements
+
+-   🔄 Progress tracking system\
+-   📱 Mobile optimization\
+-   📊 User history storage\
+-   🤖 Chat-based AI fitness assistant\
+-   🧬 Integration with wearable devices
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
+
+**Harrish Devaraj**\
+AI & Machine Learning Enthusiast
+
+GitHub:\
+https://github.com/Harrishdevaraj21
+
+------------------------------------------------------------------------
+
+## 📜 License
+
+This project is developed for academic and demonstration purposes.
+
